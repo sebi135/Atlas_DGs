@@ -1,0 +1,695 @@
+
+\begin{longtable}{cM{25mm}M{25mm}ccM{25mm}cc}
+\textbf{index} & \textbf{PAG} & \textbf{MP} & \textbf{\#MEC} & \textbf{\#DG} & \textbf{G} & \textbf{\#DEC} & \textbf{\#DG}\vspace{5pt}\\
+\hline
+\vspace{1pt}\\
+\textbf{1} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\end{tikzpicture} & $1\bigCI 2\bigCI 3\bigCI 4$ & 1 & 1 & & 1 & 1 \vspace{15pt}\\
+\textbf{2} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[o-o] (A)--(B);
+\end{tikzpicture}& $\{1,2\}\bigCI 3\bigCI 4$ & 6 & 18 && 6 & 18 \vspace{15pt}\\
+\textbf{3} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[o-o] (A)--(B);
+\draw[o-o] (C)--(D);
+\end{tikzpicture}& $\{1,2\}\bigCI\{3,4\}$ & 3 & 27 && 3 & 27 \vspace{15pt}\\
+\textbf{4} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\node[circle, draw, scale=1.6] (E) at (0,-1) {};
+\draw[o-o] (A)--(B);
+\draw[o-o] (C)--(B);
+\end{tikzpicture}& $1\bigCI 3~|~2$\newline $\{1,2,3\}\bigCI 4$ & 12 & 60 && 12 & 60 \vspace{15pt}\\
+\textbf{5} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\end{tikzpicture}& $1\bigCI 3$\newline $\{1,2,3\}\bigCI 4$ & 12 & 12 && 12 & 12 \vspace{15pt}\\
+\textbf{6.1} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[o-o] (A)--(B);
+\draw[o-o] (B)--(C);
+\draw[o-o] (C)--(A);
+\end{tikzpicture}& $\{1,2,3\}\bigCI 4$ & 4 & 144 & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(C);
+\end{tikzpicture} & 4 & 136 \vspace{15pt}\\
+\textbf{6.2} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (C)--(A);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\end{tikzpicture} & 4 & 8 (S) \vspace{15pt}\\
+\textbf{7} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\node[circle, draw, scale=1.6] (E) at (0,-1) {};
+\node[circle, draw, scale=1.6] (F) at (1,-1) {};
+\draw[o-o] (A)--(B);
+\draw[o-o] (B)--(C);
+\draw[o-o] (C)--(D);
+\end{tikzpicture}& $1\bigCI 3~|~2$\newline $\{1,2\}\bigCI 4~|~3$ & 12 & 84 & & 12 & 84 \vspace{15pt}\\
+\textbf{8} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[o-o] (C)--(D);
+\end{tikzpicture} & $1\bigCI\{3,4\}$\newline $2\bigCI 4~|~3$ & 24 & 72 & & 24 & 72 \vspace{15pt}\\
+\textbf{9} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\node[circle, draw, scale=1.6] (E) at (0,-1) {};
+\draw[o-o] (A)--(B);
+\draw[o-o] (B)--(C);
+\draw[o-o] (B)--(D);
+\end{tikzpicture}& $1\bigCI\{3,4\}~|~2$\newline $\{1,4\}\bigCI 3~|~2$ & 4 & 28 && 4 & 28  \vspace{15pt}\\
+\textbf{10} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\end{tikzpicture}& $1\bigCI 4$\newline $\{1,4\}\bigCI 3~|~2$ & 12 & 12 && 12 & 12  \vspace{15pt}\\
+\textbf{11} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\end{tikzpicture}& $1\bigCI 3\bigCI 4$ & 4 & 4 && 4 & 4  \vspace{15pt}\\
+\textbf{12.1} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\node[circle, draw, scale=1.6] (E) at (1,-1) {};
+\draw[o-o] (A)--(B);
+\draw[o-o] (B)--(C);
+\draw[o-o] (A)--(C);
+\draw[o-o] (D)--(C);
+\end{tikzpicture} & $\{1,2\}\bigCI 4~|~3$ & 12 & 552 & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\end{tikzpicture} & 12 & 528 \vspace{15pt}\\
+\textbf{12.2} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (A)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\end{tikzpicture} & 12 & 24 (S) \vspace{15pt}\\
+\textbf{13} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[o-o] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(C);
+\end{tikzpicture} & $\{1,2\}\bigCI 4$ & 12 & 36 & & 12 & 36 \vspace{15pt}\\
+\textbf{14} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\end{tikzpicture} & $2\bigCI 4$\newline $1\bigCI 4~|~\{2,3\}$ & 24 & 24 && 24 & 24 \vspace{15pt}\\
+\textbf{15} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\node[circle, draw, scale=1.6] (E) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(A);
+\draw[o-o] (B)--(C);
+\draw[o-o] (D)--(C);
+\end{tikzpicture} & $2\bigCI 4~|~3$\newline $1\bigCI 3~|~\{2,4\}$ & 12 & 60 & & 12 & 60\vspace{15pt}\\
+\textbf{16.1} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\node[circle, draw, scale=1.6] (E) at (0,-1) {};
+\node[circle, draw, scale=1.6] (F) at (1,0) {};
+\draw[o-o] (A)--(B);
+\draw[o-o] (B)--(C);
+\draw[o-o] (D)--(B);
+\draw[o-o] (A)--(D);
+\draw[o-o] (D)--(C);
+\end{tikzpicture} & $1\bigCI 3~|~\{2,4\}$ & 6 & 822 & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\end{tikzpicture} & 6 & 678\vspace{15pt}\\
+\textbf{16.2} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw[-o] (B)--(C);
+\draw (D)--(B);
+\draw (A)--(D);
+\draw[-o] (D)--(C);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\end{tikzpicture} & 12 & 120 (48) \vspace{15pt}\\
+\textbf{16.3} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw (D)--(B);
+\draw (A)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[gray] (C)--(D);
+\end{tikzpicture} & 12 & 24 (S) \vspace{15pt}\\
+\textbf{17} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\node[circle, draw, scale=1.6] (E) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[o-o] (A)--(D);
+\draw[o-o] (D)--(C);
+\end{tikzpicture} & $ 1\bigCI 3~|~4$ & 12 & 60 & & 12 & 60 \vspace{15pt}\\
+\textbf{18} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\end{tikzpicture} & $1\bigCI 2$ \newline $3\bigCI 4~|~\{1,2\}$ & 6 & 6 & & 6 & 6 \vspace{15pt}\\
+\textbf{19.1} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[o-o] (B)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\end{tikzpicture}& $1\bigCI 2$ & 6 & 54 &\begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\end{tikzpicture}  & 6 & 42 \vspace{15pt}\\
+\textbf{19.2} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw (B)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B) to [out=-110, in=110] (D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D) to [out=70, in=-70] (B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[gray] (C)--(D);
+\draw[gray] (A)--(D);
+\end{tikzpicture} & 6 & 12 \vspace{15pt}\\
+
+\textbf{20} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\node[circle, draw, dotted, scale=1.6, thick] (E) at (1,0) {};
+\node[circle, draw, dotted, scale=1.6, thick] (F) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw (B)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\end{tikzpicture}& $1\bigCI 2$\newline $1\bigCI 2~|~\{3,4\}$ & 6 & 12 & &  6  &  12  \vspace{15pt}\\
+\textbf{21} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\node[circle, draw, scale=1.6] (E) at (0,0) {};
+\node[circle, draw, scale=1.6] (F) at (0,-1) {};
+\node[circle, draw, scale=1.6] (G) at (1,0) {};
+\node[circle, draw, scale=1.6] (H) at (1,-1) {};
+\draw (A)--(B);
+\draw (B)--(D);
+\draw (C)--(A);
+\draw (D)--(C);
+\end{tikzpicture} & $1\bigCI 4~|~\{2,3\}$\newline $2\bigCI 3~|~\{1,4\}$ & 3 & 6 && 3 & 6\vspace{15pt}\\
+\textbf{22.1} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[o-o] (A)--(B);
+\draw[o-o] (B)--(C);
+\draw[o-o] (D)--(B);
+\draw[o-o] (A)--(C);
+\draw[o-o] (D)--(C);
+\draw[o-o] (D)--(A);
+\end{tikzpicture} & (None) & 1 & 2002 & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\end{tikzpicture} & 1 & 1397 \vspace{15pt}\\
+\textbf{22.2 X} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (D)--(B);
+\draw (A)--(C);
+\draw (D)--(C);
+\draw (D)--(A);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\end{tikzpicture} & 6 & 156 (24) \vspace{15pt}\\
+\textbf{22.3} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (B)--(D);
+\draw (A)--(C);
+\draw (C)--(D);
+\draw (A)--(D);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\draw[gray] (A)--(D);
+\end{tikzpicture} &  4 &  12 (S) \vspace{15pt}\\
+\textbf{22.4} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw (D)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(C);
+\draw (D)--(A);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\end{tikzpicture} & 4  &  8 (S) \vspace{15pt}\\
+
+\textbf{22.5} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw (D)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\draw (D)--(A);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(B);
+\draw[gray] (A)--(D);
+\end{tikzpicture} & 12  &  24 (S) \vspace{15pt}\\
+\textbf{22.6} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw (D)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\draw (D)--(A);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(B);
+\end{tikzpicture} &  4 &  8 (S) \vspace{15pt}\\
+\textbf{22.7} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (B)--(D);
+\draw (A)--(C);
+\draw (C)--(D);
+\draw (A)--(D);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B) to [out=-110, in=110] (D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D) to [out=70, in=-70] (B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(A);
+\draw[gray] (A)--(C);
+\end{tikzpicture} & 4 & 16\vspace{15pt}\\
+\textbf{22.8} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (B)--(D);
+\draw (A)--(C);
+\draw (C)--(D);
+\draw (A)--(D);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B) to [out=-110, in=110] (D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D) to [out=70, in=-70] (B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(C);
+\draw[gray] (D)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\end{tikzpicture} & 12 & 48\vspace{15pt}\\
+\textbf{22.9} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (B)--(D);
+\draw (A)--(C);
+\draw (C)--(D);
+\draw (A)--(D);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A) to [out=20, in=160] (B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B) to [out=-160, in=-20] (A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B) to [out=-70, in=70] (D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D) to [out=110, in=-110] (B);
+\draw[gray] (C) -- (D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C) -- (A);
+\draw[gray] (A)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\end{tikzpicture} & 4 & 180 \vspace{15pt}\\
+\textbf{22.10} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (B)--(D);
+\draw (A)--(C);
+\draw (C)--(D);
+\draw (A)--(D);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A) to [out=20, in=160] (B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B) to [out=-160, in=-20] (A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B) to [out=-70, in=70] (D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D) to [out=110, in=-110] (B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A) to [out=-70, in=70] (C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C) to [out=110, in=-110] (A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C) to [out=20, in=160] (D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D) to [out=-160, in=-20] (C);
+\draw[gray] (A)--(D);
+\draw[gray] (B)--(C);
+\end{tikzpicture} & 1 & 9 \vspace{15pt}\\
+\textbf{22.11} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw (D)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\draw (D)--(A);
+\end{tikzpicture}  &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (D) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (A) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B) to [out=-160, in=-20] (D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D) to [out=20, in=160] (B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D)--(C);
+\draw[gray] (A)--(C);
+\draw[gray] (A)--(D);
+\end{tikzpicture} &  12  &   36 \vspace{15pt}\\
+\textbf{22.12} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\draw (B)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\draw (A)--(D);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A) to [out=20, in=160] (B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B) to [out=-160, in=-20] (A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A) to [out=-70, in=70] (C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C) to [out=110, in=-110] (A);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D) -- (C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D) -- (B);
+\draw[gray] (A)--(D);
+\draw[gray] (B)--(C);
+\end{tikzpicture} & 12 & 36 \vspace{15pt}\\
+\textbf{22.13} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\node[circle, draw, dotted, scale=2, thick] (F) at (1,0) {};
+\node[circle, draw, dotted, scale=2, thick] (F) at (1,-1) {};
+\draw[o-o] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(C);
+\draw (C)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B) to [out=-70, in=70] (D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D) to [out=110, in=-110] (B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(D);
+\draw[gray] (A)--(D);
+\draw[gray] (B)--(C);
+\end{tikzpicture} & 6 & 36\vspace{15pt}\\
+\textbf{22.14} & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (0,-1) {};
+\node[circle, fill, scale=0.6] (C) at (1,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,0) {};
+\draw[o-o] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(C);
+\draw (C)--(D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(D);
+\end{tikzpicture} &&&& \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (1,0) {};
+\node[circle, fill, scale=0.6] (C) at (0,-1) {};
+\node[circle, fill, scale=0.6] (D) at (1,-1) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B) to [out=-110, in=110] (D);
+\draw[-{Stealth[length=3mm, width=2mm]}] (D) to [out=70, in=-70] (B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(B);
+\draw[gray] (A)--(D);
+\draw[gray] (C)--(D);
+\end{tikzpicture} & 6 & 36 \vspace{15pt}\\
+\hline\vspace{5pt}
+Total: && 194 & 4096 & & 327 & 4096 \vspace{15pt}\\
+\caption{Atlas: $p=4$}
+\end{longtable} 
