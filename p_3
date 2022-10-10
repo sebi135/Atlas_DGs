@@ -1,0 +1,64 @@
+\begin{longtable}{c|p{25mm}cc|ccc}
+\textbf{PAG} & \textbf{MP} & \textbf{\#MEC} & \textbf{\#DG} & \textbf{G} & \textbf{\#DEC} & \textbf{\#DG}\vspace{5pt}\\
+\hline
+\vspace{1pt}\\
+\begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (-0.5,-0.8) {};
+\node[circle, fill, scale=0.6] (C) at (0.5,-0.8) {};
+\end{tikzpicture}& $1\bigCI 2\bigCI 3$ & 1 & 1 && 1 & 1 \vspace{10pt}\\
+\begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (-0.5,-0.8) {};
+\node[circle, fill, scale=0.6] (C) at (0.5,-0.8) {};
+\draw[o-o] (A)--(B);
+\end{tikzpicture}& $\{1,2\}\bigCI 3$ & 3 & 9 && 3 & 9  \vspace{10pt}\\
+\begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (-0.5,-0.8) {};
+\node[circle, fill, scale=0.6] (C) at (0.5,-0.8) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[{Stealth[length=3mm, width=2mm]}-] (B)--(C);
+\end{tikzpicture}& $1\bigCI 3$ & 3 & 3 && 3 & 3 \vspace{10pt}\\
+\begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (-0.5,-0.8) {};
+\node[circle, fill, scale=0.6] (C) at (0.5,-0.8) {};
+\draw[o-o] (A)--(B);
+\draw[o-o] (B)--(C);
+\end{tikzpicture}& $1\bigCI 3~|~2$ & 3 & 15 && 3 & 15\vspace{15pt}\\
+\begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (-0.5,-0.8) {};
+\node[circle, fill, scale=0.6] (C) at (0.5,-0.8) {};
+\draw[o-o] (A)--(B);
+\draw[o-o] (B)--(C);
+\draw[o-o] (C)--(A);
+\end{tikzpicture} & (None) &
+  1 & 36 & \begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (-0.5,-0.8) {};
+\node[circle, fill, scale=0.6] (C) at (0.5,-0.8) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(C);
+\end{tikzpicture} & 1 & 34 \vspace{15pt}\\
+\begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (-0.5,-0.8) {};
+\node[circle, fill, scale=0.6] (C) at (0.5,-0.8) {};
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (C)--(A);
+\end{tikzpicture} & (None) & & &\begin{tikzpicture}
+\node[circle, fill, scale=0.6] (A) at (0,0) {};
+\node[circle, fill, scale=0.6] (B) at (-0.5,-0.8) {};
+\node[circle, fill, scale=0.6] (C) at (0.5,-0.8) {};
+\draw[-{Stealth[length=3mm, width=2mm]}] (A)--(B);
+\draw[-{Stealth[length=3mm, width=2mm]}] (B)--(C);
+\draw[-{Stealth[length=3mm, width=2mm]}] (C)--(A);
+\end{tikzpicture} & 1 & 2\vspace{15pt}\\
+Total: && 11 & 64 & & 12 & 64 \vspace{5pt}\\
+
+\caption{Atlas: $p=3$}
+\end{longtable} 
